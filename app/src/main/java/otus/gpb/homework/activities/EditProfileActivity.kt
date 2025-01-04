@@ -2,7 +2,6 @@ package otus.gpb.homework.activities
 
 import android.Manifest.*
 import android.content.Intent
-import android.content.res.Resources
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
@@ -73,10 +72,10 @@ class EditProfileActivity : AppCompatActivity() {
                         MaterialAlertDialogBuilder(this)
                             .setTitle(resources.getString(R.string.camera_access))
                             .setMessage(resources.getString(R.string.why_get_foto))
-                            .setPositiveButton(resources.getString(R.string.give_access)) { dialog, which ->
+                            .setPositiveButton(resources.getString(R.string.give_access)) { _, _ ->
                                 permissionCamera.launch(permission.CAMERA)
                             }
-                            .setNeutralButton(resources.getString(R.string.cancellation)) { dialog, which ->
+                            .setNeutralButton(resources.getString(R.string.cancellation)) { _, _ ->
                             }
                             .show()
                     }
